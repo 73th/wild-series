@@ -1,8 +1,15 @@
 // Load the express module to create a web application
 
 import express from "express";
+import type { RequestHandler } from "express";
 
 const app = express();
+
+const sayWelcome: RequestHandler = (req, res) => {
+  res.send("Welcome to Wild Series!");
+};
+
+app.get("/", sayWelcome);
 
 // Configure it
 
@@ -119,7 +126,5 @@ const logErrors: ErrorRequestHandler = (err, req, res, next) => {
 
 // Mount the logErrors middleware globally
 app.use(logErrors);
-
-/* ************************************************************************* */
 
 export default app;
