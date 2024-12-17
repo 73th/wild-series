@@ -13,6 +13,15 @@ router.get("/api/items", itemActions.browse);
 router.get("/api/items/:id", itemActions.read);
 router.post("/api/items", itemActions.add);
 
+// Define program-related routes
+import programActions from "./modules/programs/ProgramAction";
+
+router.get("/api/programs", programActions.browse);
+
+/* ************************************************************************* */
+
+// Declaration of a "Welcome" route
+
 /* ************************************************************************* */
 
 export default router;

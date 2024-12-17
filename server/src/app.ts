@@ -5,12 +5,6 @@ import type { RequestHandler } from "express";
 
 const app = express();
 
-const sayWelcome: RequestHandler = (req, res) => {
-  res.send("Welcome to Wild Series!");
-};
-
-app.get("/", sayWelcome);
-
 // Configure it
 
 /* ************************************************************************* */
